@@ -1,0 +1,13 @@
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+input {
+    margin: 0 auto;
+    padding: 8px;
+}
+
+pre {
+    overflow: hidden;
+}

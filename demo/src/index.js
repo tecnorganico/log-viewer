@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-
+import { Title } from "./styles";
+import css from "./styles.css";
 import LogViewer from "../../src";
 
 class Demo extends Component {
@@ -10,7 +11,7 @@ class Demo extends Component {
 
     componentDidMount() {
         fetch(
-            "https://gist.githubusercontent.com/Swizec/100cf58948c84e7454ad9c9dbe9e1d37/raw/1afa950006f87ce69c98759deb72b337727acd22/gistfile1.txt"
+            "https://gist.githubusercontent.com/abequar/f763693ba8dc6e0379c92bdfa9068c7b/raw/7b4789bfafbc7560766b65e41543bfeac6cf3efd/auth.log"
         )
             .then(response => response.text())
             .then(logs => this.setState({ logs }));
@@ -20,8 +21,8 @@ class Demo extends Component {
         const { logs } = this.state;
 
         return (
-            <div>
-                <h1>log-viewer Demo</h1>
+            <div className="container">
+                <Title>Visualizador de Logs</Title>
                 {logs ? <LogViewer logs={logs} /> : "Loading ..."}
             </div>
         );

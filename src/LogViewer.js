@@ -50,7 +50,7 @@ class LogViewer extends React.Component {
                         <div>
                             <input
                                 {...getInputProps()}
-                                placeholder="Filter logs ..."
+                                placeholder="Filtre os logs aqui..."
                             />
                             <p>{filtered.length} matches</p>
                             <pre>
